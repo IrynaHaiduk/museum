@@ -3,6 +3,7 @@
 const menu = document.querySelector('.js-header__nav');
 const menuOpen = document.querySelector('.js-header__burger');
 const menuClose = document.querySelector('.js-nav__close');
+const form = document.querySelector('.js-form');
 
 menuOpen.addEventListener('click', function() {
   showMenu();
@@ -27,3 +28,8 @@ function hideMenu() {
 function showMenu() {
   menu.style.transform = 'translateY(0)';
 }
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  form.reset();
+});
